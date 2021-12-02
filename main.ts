@@ -236,43 +236,43 @@ function animateIdle () {
     mainIdleLeft = animation.createAnimation(ActionKind.IdleLeft, 100)
     animation.attachAnimation(hero, mainIdleLeft)
     mainIdleLeft.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d d d d d d d d d e e d f . 
-        . f d d f d d d d f d d e d f . 
-        . f d d f d d d d f d d d e f . 
-        . f d d f d d d d f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f a c c c c c c c c a b f . . 
-        . f d d c c c c c c d d d f . . 
-        . f d f f f b b f f f d d f . . 
-        . . f a a a a a a a a a b f . . 
-        . . . f a a b f f a a b f . . . 
-        . . . f a a b f f a a b f . . . 
-        . . . . f f f . . f f f . . . . 
-        `)
+    0 0 0 0 c f f c c e e 0 0 0 0 0
+    0 0 e f e b 3 3 3 3 3 f f e 0 0
+    0 0 f e 3 3 3 3 3 3 3 d e e b 0
+    0 e f b e b b b 3 e b b d e e 0
+    0 f e b 3 3 4 4 3 4 3 3 3 c 0 0
+    0 0 e 4 4 4 e e e e e b b e e 0
+    0 e e e e e e 3 4 b e e e e e 0
+    0 e e e e e e e e e e e e e e 0
+    0 0 f e e e e e e e e e e e e 0
+    0 c c e e e e e e e e e e e e 0
+    c f f c e e e e e e e e e e 3 0
+    3 b f f f f e e e e e e 0 e d 0
+    0 b 0 f f f f f f f f f e b 0 0
+    0 0 0 0 f f f 0 f f f 0 0 0 0 0
+    0 0 0 0 f f f 0 f f 0 0 0 0 0 0
+    0 0 0 0 b b 0 0 0 b b 0 0 0 0 0
+    `)
     mainIdleRight = animation.createAnimation(ActionKind.IdleRight, 100)
     animation.attachAnimation(hero, mainIdleRight)
     mainIdleRight.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d e e d d d d d d d d d f . 
-        . f d e d d f d d d d f d d f . 
-        . f e d d d f d d d d f d d f . 
-        . . f d d d f d d d d f d d f . 
-        . . f d d d d d d d d d d d f . 
-        . . f b a c c c c c c c c a f . 
-        . . f d d d c c c c c c d d f . 
-        . . f d d f f f b b f f f d f . 
-        . . f b a a a a a a a a a f . . 
-        . . . f b a a f f b a a f . . . 
-        . . . f b a a f f b a a f . . . 
-        . . . . f f f . . f f f . . . . 
-        `)
+    0 0 0 0 c f f c c e e 0 0 0 0 0
+    0 0 e f e b 3 3 3 3 3 f f e 0 0
+    0 0 f e 3 3 3 3 3 3 3 d e e b 0
+    0 e f b e b b b 3 e b b d e e 0
+    0 f e b 3 3 4 4 3 4 3 3 3 c 0 0
+    0 0 e 4 4 4 e e e e e b b e e 0
+    0 e e e e e e 3 4 b e e e e e 0
+    0 e e e e e e e e e e e e e e 0
+    0 0 f e e e e e e e e e e e e 0
+    0 c c e e e e e e e e e e e e 0
+    c f f c e e e e e e e e e e 3 0
+    3 b f f f f e e e e e e 0 e d 0
+    0 b 0 f f f f f f f f f e b 0 0
+    0 0 0 0 f f f 0 f f f 0 0 0 0 0
+    0 0 0 0 f f f 0 f f 0 0 0 0 0 0
+    0 0 0 0 b b 0 0 0 b b 0 0 0 0 0
+    `)
 }
 function setLevelTileMap (level: number) {
     clearGame()
@@ -713,7 +713,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile1`, function (sprite, loc
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Flier, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
-    sprite.say("Ow!", invincibilityPeriod * 1.5)
+    sprite.say("Bug!", invincibilityPeriod * 1.5)
     music.powerDown.play()
     pause(invincibilityPeriod * 1.5)
 })
@@ -721,23 +721,23 @@ function createEnemies () {
     // enemy that moves back and forth
     for (let value5 of tiles.getTilesByType(assets.tile`tile4`)) {
         bumper = sprites.create(img`
-    0 0 0 0 4 4 4 4 4 e e 0 0 0 0 0
-    0 0 b b 4 4 4 4 4 4 e e e 0 0 0
-    0 b b 4 4 4 4 4 4 4 e e e e 0 0
-    0 4 4 4 4 4 4 4 4 4 e e e e 0 0
-    e 4 4 4 4 4 4 4 4 4 4 e e e e 0
-    0 4 e e e 4 e e 4 e e e e e 0 0
-    4 4 e e f e 4 e e e f e e e e 0
-    e 4 4 4 4 4 4 4 e e e e e e e 0
-    e 4 4 4 4 4 4 4 e 4 4 4 e e e 0
-    e 4 4 4 4 e 4 e e e 4 4 e e 0 0
-    0 e 4 4 e f f f f e e e e f 0 0
-    0 f e e f 4 4 e e e f e f f 0 0
-    0 0 f f f e f f f f f f f 0 0 0
-    0 0 f f f f f f f f f f 0 0 0 0
-    0 0 0 0 f f f f f f f 0 0 0 0 0
-    0 0 0 0 0 0 0 f 0 0 0 0 0 0 0 0
-    `, SpriteKind.Bumper)
+            . . . . 4 4 4 4 4 e e . . . . . 
+            . . b b 4 4 4 4 4 4 e e e . . . 
+            . b b 4 4 4 4 4 4 4 e e e e . . 
+            . 4 4 4 4 4 4 4 4 4 e e e e . . 
+            e 4 4 4 4 4 4 4 4 4 4 e e e e . 
+            . 4 e e e 4 e e 4 e e e e e . . 
+            4 4 e e f e 4 e e e f e e e e . 
+            e 4 4 4 4 4 4 4 e e e e e e e . 
+            e 4 4 4 4 4 4 4 e 4 4 4 e e e . 
+            e 4 4 4 4 e 4 e e e 4 4 e e . . 
+            . e 4 4 e f f f f e e e e f . . 
+            . f e e f 4 4 e e e f e f f . . 
+            . . f f f e f f f f f f f . . . 
+            . . f f f f f f f f f f . . . . 
+            . . . . f f f f f f f . . . . . 
+            . . . . . . . f . . . . . . . . 
+            `, SpriteKind.Bumper)
         tiles.placeOnTile(bumper, value5)
         tiles.setTileAt(value5, assets.tile`tile0`)
         bumper.ay = gravity
@@ -859,22 +859,22 @@ let pixelsToMeters = 0
 let invincibilityPeriod = 0
 let hero: Sprite = null
 hero = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . f f f f f f f f f f . . . 
-    . . f e e e e e e e e e e f . . 
-    . f e e e e e e e e e e e e f . 
-    . f d e e d d d d d d d d d f . 
-    . f d e d d f d d d d f d d f . 
-    . f e d d d f d d d d f d d f . 
-    . . f d d d f d d d d f d d f . 
-    . . f d d d d d d d d d d d f . 
-    . . f b a c c c c c c c c a f . 
-    . . f d d d c c c c c c d d f . 
-    . . f d d f f f b b f f f d f . 
-    . . f b a a a a a a a a a f . . 
-    . . . f b a a f f b a a f . . . 
-    . . . f b a a f f b a a f . . . 
-    . . . . f f f . . f f f . . . . 
+    . . . . c f f c c e e . . . . . 
+    . . e f e b 3 3 3 3 3 f f e . . 
+    . . f e 3 3 3 3 3 3 3 d e e b . 
+    . e f b e b b b 3 e b b d e e . 
+    . f e b 3 3 4 4 3 4 3 3 3 c . . 
+    . . e 4 4 4 e e e e e b b e e . 
+    . e e e e e e 3 4 b e e e e e . 
+    . e e e e e e e e e e e e e e . 
+    . . f e e e e e e e e e e e e . 
+    . c c e e e e e e e e e e e e . 
+    c f f c e e e e e e e e e e 3 . 
+    3 b f f f f e e e e e e . e d . 
+    . b . f f f f f f f f f e b . . 
+    . . . . f f f . f f f . . . . . 
+    . . . . f f f . f f . . . . . . 
+    . . . . b b . . . b b . . . . . 
     `, SpriteKind.Player)
 // how long to pause between each contact with a
 // single enemy
