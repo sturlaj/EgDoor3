@@ -74,7 +74,6 @@ function giveIntroduction () {
         2 2 2 2 2 2 2 d . c c c c c c c 
         2 2 2 2 2 2 2 d . . b c c c c c 
         `)
-
     showInstruction("HELP MARTIN RELEASE A NEW FEATURE!!!")
     showInstruction("WATCH OUT FOR BJØRN AND TROND!!!")
     showInstruction("Move with the left and right buttons.")
@@ -239,43 +238,43 @@ function animateIdle () {
     mainIdleLeft = animation.createAnimation(ActionKind.IdleLeft, 100)
     animation.attachAnimation(hero, mainIdleLeft)
     mainIdleLeft.addAnimationFrame(img`
-    0 0 0 0 c f f c c e e 0 0 0 0 0
-    0 0 e f e b 3 3 3 3 3 f f e 0 0
-    0 0 f e 3 3 3 3 3 3 3 d e e b 0
-    0 e f b e b b b 3 e b b d e e 0
-    0 f e b 3 3 4 4 3 4 3 3 3 c 0 0
-    0 0 e 4 4 4 e e e e e b b e e 0
-    0 e e e e e e 3 4 b e e e e e 0
-    0 e e e e e e e e e e e e e e 0
-    0 0 f e e e e e e e e e e e e 0
-    0 c c e e e e e e e e e e e e 0
-    c f f c e e e e e e e e e e 3 0
-    3 b f f f f e e e e e e 0 e d 0
-    0 b 0 f f f f f f f f f e b 0 0
-    0 0 0 0 f f f 0 f f f 0 0 0 0 0
-    0 0 0 0 f f f 0 f f 0 0 0 0 0 0
-    0 0 0 0 b b 0 0 0 b b 0 0 0 0 0
-    `)
+        . . . . c f f c c e e . . . . . 
+        . . e f e b 3 3 3 3 3 f f e . . 
+        . . f e 3 3 3 3 3 3 3 d e e b . 
+        . e f b e b b b 3 e b b d e e . 
+        . f e b 3 3 4 4 3 4 3 3 3 c . . 
+        . . e 4 4 4 e e e e e b b e e . 
+        . e e e e e e 3 4 b e e e e e . 
+        . e e e e e e e e e e e e e e . 
+        . . f e e e e e e e e e e e e . 
+        . c c e e e e e e e e e e e e . 
+        c f f c e e e e e e e e e e 3 . 
+        3 b f f f f e e e e e e . e d . 
+        . b . f f f f f f f f f e b . . 
+        . . . . f f f . f f f . . . . . 
+        . . . . f f f . f f . . . . . . 
+        . . . . b b . . . b b . . . . . 
+        `)
     mainIdleRight = animation.createAnimation(ActionKind.IdleRight, 100)
     animation.attachAnimation(hero, mainIdleRight)
     mainIdleRight.addAnimationFrame(img`
-    0 0 0 0 c f f c c e e 0 0 0 0 0
-    0 0 e f e b 3 3 3 3 3 f f e 0 0
-    0 0 f e 3 3 3 3 3 3 3 d e e b 0
-    0 e f b e b b b 3 e b b d e e 0
-    0 f e b 3 3 4 4 3 4 3 3 3 c 0 0
-    0 0 e 4 4 4 e e e e e b b e e 0
-    0 e e e e e e 3 4 b e e e e e 0
-    0 e e e e e e e e e e e e e e 0
-    0 0 f e e e e e e e e e e e e 0
-    0 c c e e e e e e e e e e e e 0
-    c f f c e e e e e e e e e e 3 0
-    3 b f f f f e e e e e e 0 e d 0
-    0 b 0 f f f f f f f f f e b 0 0
-    0 0 0 0 f f f 0 f f f 0 0 0 0 0
-    0 0 0 0 f f f 0 f f 0 0 0 0 0 0
-    0 0 0 0 b b 0 0 0 b b 0 0 0 0 0
-    `)
+        . . . . c f f c c e e . . . . . 
+        . . e f e b 3 3 3 3 3 f f e . . 
+        . . f e 3 3 3 3 3 3 3 d e e b . 
+        . e f b e b b b 3 e b b d e e . 
+        . f e b 3 3 4 4 3 4 3 3 3 c . . 
+        . . e 4 4 4 e e e e e b b e e . 
+        . e e e e e e 3 4 b e e e e e . 
+        . e e e e e e e e e e e e e e . 
+        . . f e e e e e e e e e e e e . 
+        . c c e e e e e e e e e e e e . 
+        c f f c e e e e e e e e e e 3 . 
+        3 b f f f f e e e e e e . e d . 
+        . b . f f f f f f f f f e b . . 
+        . . . . f f f . f f f . . . . . 
+        . . . . f f f . f f . . . . . . 
+        . . . . b b . . . b b . . . . . 
+        `)
 }
 function setLevelTileMap (level: number) {
     clearGame()
@@ -301,77 +300,77 @@ function setLevelTileMap (level: number) {
 function initializeFlierAnimations () {
     flierFlying = animation.createAnimation(ActionKind.Flying, 100)
     flierFlying.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . f f f f f f f . . . . 
-        . . . . f 4 4 4 4 4 4 4 f . . . 
-        . . . f 4 5 5 4 4 4 5 5 4 f . . 
-        . f . f 4 4 4 5 4 5 4 4 4 f . f 
-        . f f 4 4 4 4 4 4 4 4 4 4 4 f f 
-        . f 4 4 4 4 4 5 4 5 4 4 4 4 4 f 
-        . f 4 4 4 4 4 5 4 5 4 4 4 4 4 f 
-        . f f 4 4 4 4 4 4 4 4 4 4 4 f f 
-        . . . f 4 4 5 5 5 5 5 4 4 f . . 
-        . . . . f 4 5 4 4 4 5 4 f . . . 
-        . . . . . f f f f f f f . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . f f f f f f f f f f . . . 
+        . f f f f f e e e e e f f f . . 
+        f f f f f e 4 4 4 e e e f f . . 
+        f f f f f 4 4 4 4 e e e f f f . 
+        f f f f b 4 4 4 4 4 e e f f f . 
+        f f e e f f e e e f f c c f f . 
+        f f e f f f f 4 f e c f c f f . 
+        f f e 4 4 4 e 4 e 4 4 4 e f . . 
+        e e e 4 3 4 e 3 e 4 4 e e c . . 
+        . e e e e 4 c f f e e e c c . . 
+        . . e e e e e e e e e e c . . . 
+        . . e e e 4 e e e e b e f . . . 
+        . . . e e 4 4 4 4 e e c . . . . 
+        . . . . c e e e e c . . . . . . 
+        . . . . . . c f . . . . . . . . 
         `)
     flierFlying.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . f f f f f f f . . . . 
-        . . . . f 4 4 4 4 4 4 4 f . . . 
-        . . . f 4 5 5 4 4 4 5 5 4 f . . 
-        . . . f 4 4 4 5 4 5 4 4 4 f . . 
-        . . f 4 4 4 4 4 4 4 4 4 4 4 f . 
-        . . f 4 4 4 4 5 4 5 4 4 4 4 f . 
-        . f 4 4 4 4 4 5 4 5 4 4 4 4 4 f 
-        . f 4 4 4 4 4 4 4 4 4 4 4 4 4 f 
-        . f 4 f 4 4 5 5 5 5 5 4 4 f 4 f 
-        . f f . f 4 5 4 4 4 5 4 f . f f 
-        . f . . . f f f f f f f . . . f 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . f f f f f f f f f f . . . 
+        . f f f f f e e e e e f f f . . 
+        f f f f f e 4 4 4 e e e f f . . 
+        f f f f f 4 4 4 4 e e e f f f . 
+        f f f f b 4 4 4 4 4 e e f f f . 
+        f f e e f f e e e f f c c f f . 
+        f f e f f f f 4 f e c f c f f . 
+        f f e 4 4 4 e 4 e 4 4 4 e f . . 
+        e e e 4 3 4 e 3 e 4 4 e e c . . 
+        . e e e e 4 c f f e e e c c . . 
+        . . e e e e e e e e e e c . . . 
+        . . e e e 4 e e e e b e f . . . 
+        . . . e e 4 4 4 4 e e c . . . . 
+        . . . . c e e e e c . . . . . . 
+        . . . . . . c f . . . . . . . . 
         `)
     flierFlying.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . f f f f f f f . . . . 
-        . . . . f 4 4 4 4 4 4 4 f . . . 
-        . . . f 4 5 5 4 4 4 5 5 4 f . . 
-        . f . f 4 4 4 5 4 5 4 4 4 f . f 
-        . f f 4 4 4 4 4 4 4 4 4 4 4 f f 
-        . f 4 4 4 4 4 5 4 5 4 4 4 4 4 f 
-        . f 4 4 4 4 4 5 4 5 4 4 4 4 4 f 
-        . f f 4 4 4 4 4 4 4 4 4 4 4 f f 
-        . . . f 4 4 5 5 5 5 5 4 4 f . . 
-        . . . . f 4 5 4 4 4 5 4 f . . . 
-        . . . . . f f f f f f f . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . f f f f f f f f f f . . . 
+        . f f f f f e e e e e f f f . . 
+        f f f f f e 4 4 4 e e e f f . . 
+        f f f f f 4 4 4 4 e e e f f f . 
+        f f f f b 4 4 4 4 4 e e f f f . 
+        f f e e f f e e e f f c c f f . 
+        f f e f f f f 4 f e c f c f f . 
+        f f e 4 4 4 e 4 e 4 4 4 e f . . 
+        e e e 4 3 4 e 3 e 4 4 e e c . . 
+        . e e e e 4 c f f e e e c c . . 
+        . . e e e e e e e e e e c . . . 
+        . . e e e 4 e e e e b e f . . . 
+        . . . e e 4 4 4 4 e e c . . . . 
+        . . . . c e e e e c . . . . . . 
+        . . . . . . c f . . . . . . . . 
         `)
     flierIdle = animation.createAnimation(ActionKind.Idle, 100)
     flierIdle.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . f f f f f f f . . . . 
-        . . . . f 4 4 4 4 4 4 4 f . . . 
-        . . . f 4 5 5 4 4 4 5 5 4 f . . 
-        . f . f 4 4 4 5 4 5 4 4 4 f . f 
-        . f f 4 4 4 4 4 4 4 4 4 4 4 f f 
-        . f 4 4 4 4 4 5 4 5 4 4 4 4 4 f 
-        . f 4 4 4 4 4 5 4 5 4 4 4 4 4 f 
-        . f f 4 4 4 4 4 4 4 4 4 4 4 f f 
-        . . . f 4 4 5 5 5 5 5 4 4 f . . 
-        . . . . f 4 5 4 4 4 5 4 f . . . 
-        . . . . . f f f f f f f . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . f f f f f f f f f f . . . 
+        . f f f f f e e e e e f f f . . 
+        f f f f f e 4 4 4 e e e f f . . 
+        f f f f f 4 4 4 4 e e e f f f . 
+        f f f f b 4 4 4 4 4 e e f f f . 
+        f f e e f f e e e f f c c f f . 
+        f f e f f f f 4 f e c f c f f . 
+        f f e 4 4 4 e 4 e 4 4 4 e f . . 
+        e e e 4 3 4 e 3 e 4 4 e e c . . 
+        . e e e e 4 c f f e e e c c . . 
+        . . e e e e e e e e e e c . . . 
+        . . e e e 4 e e e e b e f . . . 
+        . . . e e 4 4 4 4 e e c . . . . 
+        . . . . c e e e e c . . . . . . 
+        . . . . . . c f . . . . . . . . 
         `)
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
