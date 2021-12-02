@@ -239,14 +239,14 @@ function animateIdle () {
     animation.attachAnimation(hero, mainIdleLeft)
     mainIdleLeft.addAnimationFrame(img`
         . . . . c f f c c e e . . . . . 
-        . . e f e b 3 3 3 3 3 f f e . . 
-        . . f e 3 3 3 3 3 3 3 d e e b . 
-        . e f b e b b b 3 e b b d e e . 
-        . f e b 3 3 4 4 3 4 3 3 3 c . . 
+        . . e f f b 3 3 3 3 3 f f e . . 
+        . . f e 3 3 3 3 3 3 d d e e b . 
+        . e f b e b b b 3 e b b d e c . 
+        . f e 3 3 3 4 4 3 b 3 3 d c . . 
         . . e 4 4 4 e e e e e b b e e . 
-        . e e e e e e 3 4 b e e e e e . 
+        . e e e e e e 3 4 3 e e e e e . 
         . e e e e e e e e e e e e e e . 
-        . . f e e e e e e e e e e e e . 
+        . . f f e e e e e e e e e e e . 
         . c c e e e e e e e e e e e e . 
         c f f c e e e e e e e e e e 3 . 
         3 b f f f f e e e e e e . e d . 
@@ -259,21 +259,21 @@ function animateIdle () {
     animation.attachAnimation(hero, mainIdleRight)
     mainIdleRight.addAnimationFrame(img`
         . . . . c f f c c e e . . . . . 
-        . . e f e b 3 3 3 3 3 f f e . . 
-        . . f e 3 3 3 3 3 3 3 d e e b . 
-        . e f b e b b b 3 e b b d e e . 
-        . f e b 3 3 4 4 3 4 3 3 3 c . . 
+        . . e f f b 3 3 3 3 3 f f e . . 
+        . . f e 3 3 3 3 3 3 d d e e b . 
+        . e f b e b b b 3 e b b d e c . 
+        . f e 3 3 3 4 4 3 b 3 3 d c . . 
         . . e 4 4 4 e e e e e b b e e . 
-        . e e e e e e 3 4 b e e e e e . 
+        . e e e e e e 3 4 3 e e e e e . 
         . e e e e e e e e e e e e e e . 
-        . . f e e e e e e e e e e e e . 
-        . c c e e e e e e e e e e e e . 
-        c f f c e e e e e e e e e e 3 . 
-        3 b f f f f e e e e e e . e d . 
-        . b . f f f f f f f f f e b . . 
-        . . . . f f f . f f f . . . . . 
-        . . . . f f f . f f . . . . . . 
-        . . . . b b . . . b b . . . . . 
+        . . f f e e e e e e e e e e e . 
+        . . c e e e e e e e e e e e e . 
+        . 3 e . e e e e e e e e e e f c 
+        . d e . c c e e e e e e f f b 3 
+        . . b e f f f f f f f f f . b . 
+        . . . . . f f f . f f f . . . . 
+        . . . . . . f f . f f f . . . . 
+        . . . . . b b . . . b b . . . . 
         `)
 }
 function setLevelTileMap (level: number) {
@@ -376,9 +376,6 @@ function initializeFlierAnimations () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     attemptJump()
 })
-function res (text: string) {
-    return "Enter these two codes in the advent calendar: 123 and 456"
-}
 function animateRun () {
     mainRunLeft = animation.createAnimation(ActionKind.RunningLeft, 100)
     animation.attachAnimation(hero, mainRunLeft)
@@ -713,8 +710,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile1`, function (sprite, loc
         game.splash("Next level unlocked!")
         setLevelTileMap(currentLevel)
     } else {
-        EGinitials = game.askForString("Enter your EG initials", 5)
-        game.showLongText(res(EGinitials), DialogLayout.Full)
         game.over(true, effects.confetti)
     }
 })
@@ -846,7 +841,6 @@ let coin: Sprite = null
 let playerStartLocation: tiles.Location = null
 let flier: Sprite = null
 let bumper: Sprite = null
-let EGinitials = ""
 let mainCrouchRight: animation.Animation = null
 let mainCrouchLeft: animation.Animation = null
 let mainJumpRight: animation.Animation = null
