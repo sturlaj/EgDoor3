@@ -878,7 +878,7 @@ hero = sprites.create(img`
     `, SpriteKind.Player)
 // how long to pause between each contact with a
 // single enemy
-invincibilityPeriod = 550
+invincibilityPeriod = 600
 pixelsToMeters = 30
 gravity = 9.81 * pixelsToMeters
 scene.setBackgroundImage(img`
