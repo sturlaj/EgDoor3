@@ -376,6 +376,21 @@ function initializeFlierAnimations () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     attemptJump()
 })
+function res (text: string) {
+    return "Enter these two codes in the advent calendar: 116 and " + hashcode(text.toUpperCase())
+}
+function hashcode (text: string) {
+    let hash = 0, i, chr;
+if (text.length == 0) {
+        return hash
+    }
+    for (i = 0; i < text.length; i++) {
+        chr = text.charCodeAt(i);
+        hash = ((hash << 5) - hash) + chr;
+        hash |= 0; // Convert to 32bit integer
+    }
+return hash
+}
 function animateRun () {
     mainRunLeft = animation.createAnimation(ActionKind.RunningLeft, 100)
     animation.attachAnimation(hero, mainRunLeft)
@@ -710,6 +725,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile1`, function (sprite, loc
         game.splash("Next level unlocked!")
         setLevelTileMap(currentLevel)
     } else {
+        EGinitials = game.askForString("Enter your EG initials", 5)
+        game.showLongText(res(EGinitials), DialogLayout.Full)
         game.over(true, effects.confetti)
     }
 })
@@ -841,6 +858,7 @@ let coin: Sprite = null
 let playerStartLocation: tiles.Location = null
 let flier: Sprite = null
 let bumper: Sprite = null
+let EGinitials = ""
 let mainCrouchRight: animation.Animation = null
 let mainCrouchLeft: animation.Animation = null
 let mainJumpRight: animation.Animation = null
