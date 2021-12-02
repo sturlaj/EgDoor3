@@ -57,22 +57,22 @@ function giveIntroduction () {
         . . . . . . . . . . . . . . . . 
         `)
     game.setDialogCursor(img`
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c d . . . . . 2 2 2 2 2 2 2 2 
+        c c b d d d d . 2 2 2 2 2 2 2 2 
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c b . . . . . 2 2 2 2 2 2 2 2 
+        c c c b b b b . 2 2 2 2 2 2 2 2 
+        b c c c c c c . 2 2 2 2 2 2 2 2 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . f f 5 5 5 5 f f . . . . 
-        . . . . f 5 5 5 5 5 5 f . . . . 
-        . . . f 5 5 5 4 4 5 5 5 f . . . 
-        . . . f 5 5 5 4 4 5 5 5 f . . . 
-        . . . f 5 5 5 4 4 5 5 5 f . . . 
-        . . . f 5 5 5 4 4 5 5 5 f . . . 
-        . . . . f 5 5 5 5 5 5 f . . . . 
-        . . . . f f 5 5 5 5 f f . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        2 2 2 2 2 2 2 d . . b c c c c b 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d b c c b . . . . 
+        2 2 2 2 2 2 2 d c c c . . . . . 
+        2 2 2 2 2 2 2 d c c c . b c c c 
+        2 2 2 2 2 2 2 d b c c b . c c c 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d . . b c c c c c 
         `)
     showInstruction("Move with the left and right buttons.")
     showInstruction("Jump with the up or A button.")
@@ -84,130 +84,130 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 function initializeCoinAnimation () {
     coinAnimation = animation.createAnimation(ActionKind.Idle, 200)
     coinAnimation.addAnimationFrame(img`
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c d . . . . . 2 2 2 2 2 2 2 2 
+        c c b d d d d . 2 2 2 2 2 2 2 2 
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c b . . . . . 2 2 2 2 2 2 2 2 
+        c c c b b b b . 2 2 2 2 2 2 2 2 
+        b c c c c c c . 2 2 2 2 2 2 2 2 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . f f 5 5 5 5 f f . . . . 
-        . . . . f 5 5 5 5 5 5 f . . . . 
-        . . . f 5 5 5 4 4 5 5 5 f . . . 
-        . . . f 5 5 5 4 4 5 5 5 f . . . 
-        . . . f 5 5 5 4 4 5 5 5 f . . . 
-        . . . f 5 5 5 4 4 5 5 5 f . . . 
-        . . . . f 5 5 5 5 5 5 f . . . . 
-        . . . . f f 5 5 5 5 f f . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        2 2 2 2 2 2 2 d . . b c c c c b 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d b c c b . . . . 
+        2 2 2 2 2 2 2 d c c c . . . . . 
+        2 2 2 2 2 2 2 d c c c . b c c c 
+        2 2 2 2 2 2 2 d b c c b . c c c 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d . . b c c c c c 
         `)
     coinAnimation.addAnimationFrame(img`
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c d . . . . . 2 2 2 2 2 2 2 2 
+        c c b d d d d . 2 2 2 2 2 2 2 2 
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c b . . . . . 2 2 2 2 2 2 2 2 
+        c c c b b b b . 2 2 2 2 2 2 2 2 
+        b c c c c c c . 2 2 2 2 2 2 2 2 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . f f 5 f 5 5 5 f . . . . . 
-        . . . f 5 f 5 5 5 5 5 f . . . . 
-        . . f 5 f 5 5 5 4 5 5 f . . . . 
-        . . f 5 f 5 5 5 4 4 5 5 f . . . 
-        . . f 5 f 5 5 5 4 4 5 5 f . . . 
-        . . f 5 f 5 5 5 4 5 5 f . . . . 
-        . . . f 5 f 5 5 5 5 5 f . . . . 
-        . . . . f 5 f 5 5 5 f . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        2 2 2 2 2 2 2 d . . b c c c c b 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d b c c b . . . . 
+        2 2 2 2 2 2 2 d c c c . . . . . 
+        2 2 2 2 2 2 2 d c c c . b c c c 
+        2 2 2 2 2 2 2 d b c c b . c c c 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d . . b c c c c c 
         `)
     coinAnimation.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . f f f f f . . . . . . 
-        . . . . f f 5 f 5 f f . . . . . 
-        . . . f f 5 f 5 5 5 f . . . . . 
-        . . . f 5 f 5 5 5 5 f f . . . . 
-        . . . f 5 f 5 5 4 5 5 f . . . . 
-        . . . f 5 f 5 5 4 5 5 f . . . . 
-        . . . f 5 f 5 5 5 5 f f . . . . 
-        . . . f f 5 f 5 5 5 f . . . . . 
-        . . . . f f 5 f 5 f f . . . . . 
-        . . . . . f f f f f . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . d b c c c c d e e e e e e . . 
+        . c c c b b b . e 2 2 2 2 2 . . 
+        . c c b d d d . e 2 2 2 2 2 . . 
+        . c c c c c c d e 2 2 2 2 2 . . 
+        . c c b d d d . e 2 2 2 2 2 . . 
+        . c c c d d d . e 2 2 2 2 2 . . 
+        . b b c c c c d e 2 2 2 2 2 . . 
+        . . . d d d d . d d d d d d . . 
+        . d d d d d d . . . d d d . . . 
+        . e 2 2 2 2 e d . b c c c c . . 
+        . e 2 2 2 2 2 d b c b d d d . . 
+        . e 2 2 2 2 2 d c c d . . . . . 
+        . e 2 2 2 2 2 d c c d d c c . . 
+        . e 2 2 2 2 2 d b c d d c c . . 
+        . e 2 2 2 2 2 d b c b b c c . . 
+        . e 2 2 2 2 2 d . b c c c c . . 
         `)
     coinAnimation.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . . f f f f f . . . . . . 
-        . . . . . f 5 f 5 f f . . . . . 
-        . . . . . f 5 f 5 5 f . . . . . 
-        . . . . . f 5 f 5 5 f . . . . . 
-        . . . . . f 5 f 5 5 f . . . . . 
-        . . . . . f 5 f 5 5 f . . . . . 
-        . . . . . f 5 f 5 f f . . . . . 
-        . . . . . f f f f f . . . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . b c c c 3 e e e e . . . . 
+        . . . c c b b 3 2 2 2 2 . . . . 
+        . . . c b d d 3 2 2 2 2 . . . . 
+        . . . c c c c b 2 2 2 2 . . . . 
+        . . . c b d d 3 2 2 2 2 . . . . 
+        . . . c b d d 3 2 2 2 2 . . . . 
+        . . . b c c b b 2 2 2 2 . . . . 
+        . . . . d d d d d d d d . . . . 
+        . . . d d d d . . d d d . . . . 
+        . . . e 2 2 e d b c c c . . . . 
+        . . . 2 2 2 e d c b d d . . . . 
+        . . . 2 2 2 e b c d . . . . . . 
+        . . . 2 2 2 e b c d c c . . . . 
+        . . . 2 2 2 e b c d c c . . . . 
+        . . . 2 2 2 e d c b c c . . . . 
+        . . . 2 2 2 e d b c c c . . . . 
         `)
     coinAnimation.addAnimationFrame(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . . . f f f f f . . . . . 
-        . . . . . f f 5 f 5 f . . . . . 
-        . . . . . f 5 5 f 5 f . . . . . 
-        . . . . . f 5 5 f 5 f . . . . . 
-        . . . . . f 5 5 f 5 f . . . . . 
-        . . . . . f 5 5 f 5 f . . . . . 
-        . . . . . f f 5 f 5 f . . . . . 
-        . . . . . . f f f f f . . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . d b c c c c d e e e e e e . . 
+        . c c c b b b . e 2 2 2 2 2 . . 
+        . c c b d d d . e 2 2 2 2 2 . . 
+        . c c c c c c d e 2 2 2 2 2 . . 
+        . c c b d d d . e 2 2 2 2 2 . . 
+        . c c c d d d . e 2 2 2 2 2 . . 
+        . b b c c c c d e 2 2 2 2 2 . . 
+        . . . d d d d . d d d d d d . . 
+        . d d d d d d . . . d d d . . . 
+        . e 2 2 2 2 e d . b c c c c . . 
+        . e 2 2 2 2 2 d b c b d d d . . 
+        . e 2 2 2 2 2 d c c d . . . . . 
+        . e 2 2 2 2 2 d c c d d c c . . 
+        . e 2 2 2 2 2 d b c d d c c . . 
+        . e 2 2 2 2 2 d b c b b c c . . 
+        . e 2 2 2 2 2 d . b c c c c . . 
         `)
     coinAnimation.addAnimationFrame(img`
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c d . . . . . 2 2 2 2 2 2 2 2 
+        c c b d d d d . 2 2 2 2 2 2 2 2 
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c b . . . . . 2 2 2 2 2 2 2 2 
+        c c c b b b b . 2 2 2 2 2 2 2 2 
+        b c c c c c c . 2 2 2 2 2 2 2 2 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f . . . . . 
-        . . . . . f f 5 f 5 f f . . . . 
-        . . . . . f 5 5 5 f 5 f f . . . 
-        . . . . f f 5 5 5 5 f 5 f . . . 
-        . . . . f 5 5 4 5 5 f 5 f . . . 
-        . . . . f 5 5 4 5 5 f 5 f . . . 
-        . . . . f f 5 5 5 5 f 5 f . . . 
-        . . . . . f 5 5 5 f 5 f f . . . 
-        . . . . . f f 5 f 5 f f . . . . 
-        . . . . . . f f f f f . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        2 2 2 2 2 2 2 d . . b c c c c b 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d b c c b . . . . 
+        2 2 2 2 2 2 2 d c c c . . . . . 
+        2 2 2 2 2 2 2 d c c c . b c c c 
+        2 2 2 2 2 2 2 d b c c b . c c c 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d . . b c c c c c 
         `)
     coinAnimation.addAnimationFrame(img`
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c d . . . . . 2 2 2 2 2 2 2 2 
+        c c b d d d d . 2 2 2 2 2 2 2 2 
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c b . . . . . 2 2 2 2 2 2 2 2 
+        c c c b b b b . 2 2 2 2 2 2 2 2 
+        b c c c c c c . 2 2 2 2 2 2 2 2 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . f 5 5 5 f 5 f f . . . 
-        . . . . f 5 5 5 5 5 f 5 f . . . 
-        . . . . f 5 5 4 5 5 5 f 5 f . . 
-        . . . f 5 5 4 4 5 5 5 f 5 f . . 
-        . . . f 5 5 4 4 5 5 5 f 5 f . . 
-        . . . . f 5 5 4 5 5 5 f 5 f . . 
-        . . . . f 5 5 5 5 5 f 5 f . . . 
-        . . . . . f 5 5 5 f 5 f . . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        2 2 2 2 2 2 2 d . . b c c c c b 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d b c c b . . . . 
+        2 2 2 2 2 2 2 d c c c . . . . . 
+        2 2 2 2 2 2 2 d c c c . b c c c 
+        2 2 2 2 2 2 2 d b c c b . c c c 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d . . b c c c c c 
         `)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Coin, function (sprite, otherSprite) {
@@ -811,23 +811,23 @@ function hasNextLevel () {
 function spawnGoals () {
     for (let value7 of tiles.getTilesByType(assets.tile`tile5`)) {
         coin = sprites.create(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . f f f f . . . . . . 
-            . . . . f f 5 5 5 5 f f . . . . 
-            . . . . f 5 5 5 5 5 5 f . . . . 
-            . . . f 5 5 5 4 4 5 5 5 f . . . 
-            . . . f 5 5 5 4 4 5 5 5 f . . . 
-            . . . f 5 5 5 4 4 5 5 5 f . . . 
-            . . . f 5 5 5 4 4 5 5 5 f . . . 
-            . . . . f 5 5 5 5 5 5 f . . . . 
-            . . . . f f 5 5 5 5 f f . . . . 
-            . . . . . . f f f f . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `, SpriteKind.Coin)
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c d . . . . . 2 2 2 2 2 2 2 2 
+        c c b d d d d . 2 2 2 2 2 2 2 2 
+        c c c c c c c . 2 2 2 2 2 2 2 2 
+        c c b . . . . . 2 2 2 2 2 2 2 2 
+        c c c b b b b . 2 2 2 2 2 2 2 2 
+        b c c c c c c . 2 2 2 2 2 2 2 2 
+        . . . . . . . . . . . . . . . . 
+        2 2 2 2 2 2 2 d . . b c c c c b 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d b c c b . . . . 
+        2 2 2 2 2 2 2 d c c c . . . . . 
+        2 2 2 2 2 2 2 d c c c . b c c c 
+        2 2 2 2 2 2 2 d b c c b . c c c 
+        2 2 2 2 2 2 2 d . c c c c c c c 
+        2 2 2 2 2 2 2 d . . b c c c c c 
+        `, SpriteKind.Coin)
         tiles.placeOnTile(coin, value7)
         animation.attachAnimation(coin, coinAnimation)
         animation.setAction(coin, ActionKind.Idle)
