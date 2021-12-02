@@ -681,19 +681,19 @@ function animateCrouch () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d d d d d d d d d e e d f . 
-        . f d d f d d d d f d d e d f . 
-        . f d d f d d d d f d d d e f . 
-        . f d d f d d d d f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f a c c c c c c c c a b f . . 
-        . f d c c c c c c c c c d d f . 
-        f d d f f f b b f f f f d d f . 
-        . f f a a a a a a a a a b f . . 
-        . . . f f f f . f f f f f . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . c f f c c e e . . . . . . 
+        . e f f b 3 3 3 3 3 f f e . . . 
+        . f e 3 3 3 3 3 3 d d e e b . . 
+        e f b e b b b 3 e b b d e c . . 
+        f e 3 3 3 4 4 3 b 3 3 d c . . . 
+        . e 4 4 4 e e e e e b b e e . . 
+        e e e e e e 3 4 3 e e e e e . . 
+        e e e e e e e e e e e e e e . . 
+        b f f e e e e e e e e e e e c . 
+        d e e e e e e e e e e e e e 3 . 
+        . b e e e e e e e e e e e b . . 
+        . . . . f e e e e e e . . . . . 
         `)
     mainCrouchRight = animation.createAnimation(ActionKind.CrouchRight, 100)
     animation.attachAnimation(hero, mainCrouchRight)
@@ -701,19 +701,19 @@ function animateCrouch () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . f f f f f f f f f f . . . 
-        . . f e e e e e e e e e e f . . 
-        . f e e e e e e e e e e e e f . 
-        . f d e e d d d d d d d d d f . 
-        . f d e d d f d d d d f d d f . 
-        . f e d d d f d d d d f d d f . 
-        . . f d d d f d d d d f d d f . 
-        . . f d d d d d d d d d d d f . 
-        . . f b a c c c c c c c c a f . 
-        . f d d c c c c c c c c c d f . 
-        . f d d f f f f b b f f f d d f 
-        . . f b a a a a a a a a a f f . 
-        . . . f f f f f . f f f f . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . e e c c f f c . . . 
+        . . . e f f 3 3 3 3 3 b f f e . 
+        . . b e e d d 3 3 3 3 3 3 e f . 
+        . . c e d b b e 3 b b b e b f e 
+        . . . c d 3 3 b 3 4 4 3 3 3 e f 
+        . . e e b b e e e e e 4 4 4 e . 
+        . . e e e e e 3 4 3 e e e e e e 
+        . . e e e e e e e e e e e e e e 
+        . c e e e e e e e e e e e f f b 
+        . 3 e e e e e e e e e e e e e d 
+        . . b e e e e e e e e e e e b . 
+        . . . . . e e e e e e f . . . . 
         `)
 }
 function clearGame () {
