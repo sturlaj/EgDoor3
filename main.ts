@@ -374,6 +374,9 @@ function initializeFlierAnimations () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     attemptJump()
 })
+function res (text: string) {
+    return "Enter these two codes in the advent calendar: 123 and 456"
+}
 function animateRun () {
     mainRunLeft = animation.createAnimation(ActionKind.RunningLeft, 100)
     animation.attachAnimation(hero, mainRunLeft)
@@ -708,6 +711,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile1`, function (sprite, loc
         game.splash("Next level unlocked!")
         setLevelTileMap(currentLevel)
     } else {
+        EGinitials = game.askForString("Enter your EG initials", 5)
+        game.showLongText(res(EGinitials), DialogLayout.Full)
         game.over(true, effects.confetti)
     }
 })
@@ -811,23 +816,23 @@ function hasNextLevel () {
 function spawnGoals () {
     for (let value7 of tiles.getTilesByType(assets.tile`tile5`)) {
         coin = sprites.create(img`
-        c c c c c c c . 2 2 2 2 2 2 2 2 
-        c c d . . . . . 2 2 2 2 2 2 2 2 
-        c c b d d d d . 2 2 2 2 2 2 2 2 
-        c c c c c c c . 2 2 2 2 2 2 2 2 
-        c c b . . . . . 2 2 2 2 2 2 2 2 
-        c c c b b b b . 2 2 2 2 2 2 2 2 
-        b c c c c c c . 2 2 2 2 2 2 2 2 
-        . . . . . . . . . . . . . . . . 
-        2 2 2 2 2 2 2 d . . b c c c c b 
-        2 2 2 2 2 2 2 d . c c c c c c c 
-        2 2 2 2 2 2 2 d b c c b . . . . 
-        2 2 2 2 2 2 2 d c c c . . . . . 
-        2 2 2 2 2 2 2 d c c c . b c c c 
-        2 2 2 2 2 2 2 d b c c b . c c c 
-        2 2 2 2 2 2 2 d . c c c c c c c 
-        2 2 2 2 2 2 2 d . . b c c c c c 
-        `, SpriteKind.Coin)
+            c c c c c c c . 2 2 2 2 2 2 2 2 
+            c c d . . . . . 2 2 2 2 2 2 2 2 
+            c c b d d d d . 2 2 2 2 2 2 2 2 
+            c c c c c c c . 2 2 2 2 2 2 2 2 
+            c c b . . . . . 2 2 2 2 2 2 2 2 
+            c c c b b b b . 2 2 2 2 2 2 2 2 
+            b c c c c c c . 2 2 2 2 2 2 2 2 
+            . . . . . . . . . . . . . . . . 
+            2 2 2 2 2 2 2 d . . b c c c c b 
+            2 2 2 2 2 2 2 d . c c c c c c c 
+            2 2 2 2 2 2 2 d b c c b . . . . 
+            2 2 2 2 2 2 2 d c c c . . . . . 
+            2 2 2 2 2 2 2 d c c c . b c c c 
+            2 2 2 2 2 2 2 d b c c b . c c c 
+            2 2 2 2 2 2 2 d . c c c c c c c 
+            2 2 2 2 2 2 2 d . . b c c c c c 
+            `, SpriteKind.Coin)
         tiles.placeOnTile(coin, value7)
         animation.attachAnimation(coin, coinAnimation)
         animation.setAction(coin, ActionKind.Idle)
@@ -839,6 +844,7 @@ let coin: Sprite = null
 let playerStartLocation: tiles.Location = null
 let flier: Sprite = null
 let bumper: Sprite = null
+let EGinitials = ""
 let mainCrouchRight: animation.Animation = null
 let mainCrouchLeft: animation.Animation = null
 let mainJumpRight: animation.Animation = null
