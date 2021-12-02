@@ -721,23 +721,23 @@ function createEnemies () {
     // enemy that moves back and forth
     for (let value5 of tiles.getTilesByType(assets.tile`tile4`)) {
         bumper = sprites.create(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . f f f f f f . . . . . . 
-            . . . f 7 2 7 7 7 2 f . . . . . 
-            . . f 7 7 7 2 7 2 7 7 f . . . . 
-            . . f 7 7 7 7 7 7 7 7 7 f . . . 
-            . f 7 7 7 2 7 7 7 2 7 7 f . . . 
-            . f 7 7 7 2 7 7 7 2 7 7 7 f . . 
-            . f 7 7 7 7 7 7 7 7 7 7 7 7 f . 
-            . f 7 7 7 7 2 2 2 7 7 7 7 7 f . 
-            . . f 7 7 2 2 7 2 2 7 7 7 7 f . 
-            . . f 7 7 2 7 7 7 2 2 7 7 7 f . 
-            . . . f 7 7 7 7 7 7 7 7 7 7 f . 
-            . . . . f f 7 7 7 7 7 7 7 f . . 
-            . . . . . . f f f f f f f . . . 
-            . . . . . . . . . . . . . . . . 
-            `, SpriteKind.Bumper)
+    0 0 0 0 4 4 4 4 4 e e 0 0 0 0 0
+    0 0 b b 4 4 4 4 4 4 e e e 0 0 0
+    0 b b 4 4 4 4 4 4 4 e e e e 0 0
+    0 4 4 4 4 4 4 4 4 4 e e e e 0 0
+    e 4 4 4 4 4 4 4 4 4 4 e e e e 0
+    0 4 e e e 4 e e 4 e e e e e 0 0
+    4 4 e e f e 4 e e e f e e e e 0
+    e 4 4 4 4 4 4 4 e e e e e e e 0
+    e 4 4 4 4 4 4 4 e 4 4 4 e e e 0
+    e 4 4 4 4 e 4 e e e 4 4 e e 0 0
+    0 e 4 4 e f f f f e e e e f 0 0
+    0 f e e f 4 4 e e e f e f f 0 0
+    0 0 f f f e f f f f f f f 0 0 0
+    0 0 f f f f f f f f f f 0 0 0 0
+    0 0 0 0 f f f f f f f 0 0 0 0 0
+    0 0 0 0 0 0 0 f 0 0 0 0 0 0 0 0
+    `, SpriteKind.Bumper)
         tiles.placeOnTile(bumper, value5)
         tiles.setTileAt(value5, assets.tile`tile0`)
         bumper.ay = gravity
@@ -811,23 +811,23 @@ function hasNextLevel () {
 function spawnGoals () {
     for (let value7 of tiles.getTilesByType(assets.tile`tile5`)) {
         coin = sprites.create(img`
-        c c c c c c c . 2 2 2 2 2 2 2 2 
-        c c d . . . . . 2 2 2 2 2 2 2 2 
-        c c b d d d d . 2 2 2 2 2 2 2 2 
-        c c c c c c c . 2 2 2 2 2 2 2 2 
-        c c b . . . . . 2 2 2 2 2 2 2 2 
-        c c c b b b b . 2 2 2 2 2 2 2 2 
-        b c c c c c c . 2 2 2 2 2 2 2 2 
-        . . . . . . . . . . . . . . . . 
-        2 2 2 2 2 2 2 d . . b c c c c b 
-        2 2 2 2 2 2 2 d . c c c c c c c 
-        2 2 2 2 2 2 2 d b c c b . . . . 
-        2 2 2 2 2 2 2 d c c c . . . . . 
-        2 2 2 2 2 2 2 d c c c . b c c c 
-        2 2 2 2 2 2 2 d b c c b . c c c 
-        2 2 2 2 2 2 2 d . c c c c c c c 
-        2 2 2 2 2 2 2 d . . b c c c c c 
-        `, SpriteKind.Coin)
+            c c c c c c c . 2 2 2 2 2 2 2 2 
+            c c d . . . . . 2 2 2 2 2 2 2 2 
+            c c b d d d d . 2 2 2 2 2 2 2 2 
+            c c c c c c c . 2 2 2 2 2 2 2 2 
+            c c b . . . . . 2 2 2 2 2 2 2 2 
+            c c c b b b b . 2 2 2 2 2 2 2 2 
+            b c c c c c c . 2 2 2 2 2 2 2 2 
+            . . . . . . . . . . . . . . . . 
+            2 2 2 2 2 2 2 d . . b c c c c b 
+            2 2 2 2 2 2 2 d . c c c c c c c 
+            2 2 2 2 2 2 2 d b c c b . . . . 
+            2 2 2 2 2 2 2 d c c c . . . . . 
+            2 2 2 2 2 2 2 d c c c . b c c c 
+            2 2 2 2 2 2 2 d b c c b . c c c 
+            2 2 2 2 2 2 2 d . c c c c c c c 
+            2 2 2 2 2 2 2 d . . b c c c c c 
+            `, SpriteKind.Coin)
         tiles.placeOnTile(coin, value7)
         animation.attachAnimation(coin, coinAnimation)
         animation.setAction(coin, ActionKind.Idle)
