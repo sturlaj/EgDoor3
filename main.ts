@@ -76,6 +76,7 @@ function giveIntroduction () {
         `)
 
     showInstruction("HELP MARTIN RELEASE A NEW FEATURE!!!")
+    showInstruction("WATCH OUT FOR BJØRN AND TROND!!!")
     showInstruction("Move with the left and right buttons.")
     showInstruction("Jump with the up or A button.")
     showInstruction("Double jump by pressing jump again.")
