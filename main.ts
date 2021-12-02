@@ -374,9 +374,21 @@ function initializeFlierAnimations () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     attemptJump()
 })
-function res (text: string) {
-    return "Enter these two codes in the advent calendar: 123 and 456"
+function res(text: string) {
+    return "Enter these two codes in the advent calendar: 116 and " + hashcode(text.toUpperCase());
 }
+
+function hashcode(text: string) {
+    let hash = 0, i, chr;
+    if (text.length === 0) return hash;
+    for (i = 0; i < text.length; i++) {
+        chr = text.charCodeAt(i);
+        hash = ((hash << 5) - hash) + chr;
+        hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+}
+
 function animateRun () {
     mainRunLeft = animation.createAnimation(ActionKind.RunningLeft, 100)
     animation.attachAnimation(hero, mainRunLeft)
